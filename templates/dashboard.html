@@ -1,0 +1,17 @@
+<h2>Dashboard</h2>
+
+<form method="POST" action="/add_trade">
+    <input name="pair" placeholder="Pair"><br><br>
+    <select name="result">
+        <option value="win">Win</option>
+        <option value="lose">Lose</option>
+    </select><br><br>
+    <button>Add Trade</button>
+</form>
+
+<h3>Your Trades</h3>
+<ul>
+{% for t in trades %}
+    <li>{{t.pair}} - {{t.result}}</li>
+{% endfor %}
+</ul>
